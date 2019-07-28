@@ -90,7 +90,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="89 in Deck" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUp-qS-IVE">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="81 in Deck" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUp-qS-IVE">
                                                 <rect key="frame" x="191" y="0.0" width="183" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,11 +112,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="5xI-L1-14G"/>
                                                 </constraints>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fe5-Hj-aMY"/>
                                                 </connections>
@@ -124,11 +119,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="U4R-5t-cWO" userLabel="▲ ● ■" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="96" y="0.0" width="86" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wll-IO-1fu"/>
                                                 </connections>
@@ -136,11 +126,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="E6m-GR-95O" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="192" y="0.0" width="86" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qDF-y7-0DB"/>
                                                 </connections>
@@ -148,11 +133,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cW8-6x-JJk" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="288" y="0.0" width="86" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eyf-7q-002"/>
                                                 </connections>
@@ -165,11 +145,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1wa-ab-m8B" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qWZ-oB-pp6"/>
                                                 </connections>
@@ -177,11 +152,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QeB-3e-19k" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="95.5" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ywa-Dz-Hag"/>
                                                 </connections>
@@ -189,11 +159,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="AnF-1t-0bf" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="191" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TgJ-ym-hTj"/>
                                                 </connections>
@@ -201,11 +166,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="JcL-IG-p0J" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="286.5" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Tj-Gn-imQ"/>
                                                 </connections>
@@ -218,11 +178,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sIQ-Vt-ZrB" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IVf-b6-Syo"/>
                                                 </connections>
@@ -230,11 +185,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="h7t-A1-Tcg" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="95.5" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5i-1B-EUz"/>
                                                 </connections>
@@ -242,11 +192,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="r2B-gs-pVt" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="191" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oeY-49-aEv"/>
                                                 </connections>
@@ -254,11 +199,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uDa-mn-HlX" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="286.5" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yjk-O6-2NJ"/>
                                                 </connections>
@@ -271,11 +211,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Bry-K0-pFZ" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cS6-es-Tcq"/>
                                                 </connections>
@@ -283,11 +218,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hgW-gs-Tw4" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="95.5" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o0q-Gb-fcf"/>
                                                 </connections>
@@ -295,11 +225,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WT2-BG-dyG" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="191" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BMz-d8-gxb"/>
                                                 </connections>
@@ -307,11 +232,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KSf-Jl-7ES" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="286.5" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gIg-Tc-gFd"/>
                                                 </connections>
@@ -324,11 +244,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hBq-Sq-fLH" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dMc-Z6-I8Z"/>
                                                 </connections>
@@ -336,11 +251,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xkG-Db-ji6" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="95.5" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BR0-lS-rD2"/>
                                                 </connections>
@@ -348,11 +258,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="c60-60-WxT" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="191" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="my2-ih-y2C"/>
                                                 </connections>
@@ -360,11 +265,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="qN4-8A-MyW" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="286.5" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jay-TF-AsK"/>
                                                 </connections>
@@ -377,11 +277,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="q54-Ma-2T8" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fl-9d-jzE"/>
                                                 </connections>
@@ -389,11 +284,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cOz-M1-48a" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="95.5" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3CZ-Ox-P0Z"/>
                                                 </connections>
@@ -401,11 +291,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lI5-gr-YJ4" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="191" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wlo-08-Imn"/>
                                                 </connections>
@@ -413,11 +298,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="00r-U1-EQ5" customClass="CardButton" customModule="Set" customModuleProvider="target">
                                                 <rect key="frame" x="286.5" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <string key="title">▲
-●
-■</string>
-                                                </state>
                                                 <connections>
                                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yeN-Ku-Cel"/>
                                                 </connections>

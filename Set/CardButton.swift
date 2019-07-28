@@ -73,7 +73,7 @@ class CardButton: UIButton {
             self.matchState        = .notSet
             self.backgroundColor   = Theme.backgroundColor
             self.setAttributedTitle(nil, for: .normal)
-            self.setTitle("", for: .normal)
+            self.setTitle(nil, for: .normal)
             
         }
         
