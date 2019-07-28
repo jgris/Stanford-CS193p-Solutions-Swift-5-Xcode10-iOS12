@@ -13,10 +13,10 @@ struct Card: Hashable
 //    Card's unique identifier
     private(set) var identifier: Int
     // Card's attributes
-    let number: Int
-    let shape: Value
-    let color: Value
-    let fill: Value
+    let number  : Int
+    let shape   : Value
+    let color   : Value
+    let fill    : Value
     
     /// Retuns instance of 'Card'
     /// - Parameters:
@@ -30,10 +30,10 @@ struct Card: Hashable
     init(numberOfFigures: Int, shape: Value, color: Value, fill: Value) {
         // Setting unique identifier for card
         self.identifier = Card.getUniqueIdentifier()
-        self.number = numberOfFigures
-        self.shape = shape
-        self.color = color
-        self.fill = fill
+        self.number     = numberOfFigures
+        self.shape      = shape
+        self.color      = color
+        self.fill       = fill
     }
     
     /// Variants of the card's parameters value
