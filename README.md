@@ -1,2 +1,2 @@
-# Stanford-CS193p-Solutions-Swift-5-Xcode10-iOS12
-Stanford University's CS193p (Developing Applications for iOS). Solutions for Assignments.
+# Stanford University's CS193p (Developing Applications for iOS). Swift5, Xcode10, iOS12
+Solutions for Assignments.
