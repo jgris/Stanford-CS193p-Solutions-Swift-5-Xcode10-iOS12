@@ -95,7 +95,7 @@ struct Game
     ///
     private mutating func matchCards() {
         guard selectedCards.count == 3 else { return }
-        // Testing weather cards is matched
+        // Testing whether cards is matched
         let sum = [
             selectedCards.reduce(0, { $0 + $1.number }),
             selectedCards.reduce(0, { $0 + $1.shape.rawValue }),
