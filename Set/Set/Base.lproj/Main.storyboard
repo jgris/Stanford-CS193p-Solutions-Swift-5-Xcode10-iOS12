@@ -99,15 +99,20 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Yjc-Pq-Ha9" firstAttribute="leading" secondItem="hwZ-0y-6i6" secondAttribute="leading" id="3U7-b7-L5o"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yjc-Pq-Ha9" secondAttribute="trailing" id="AVd-cN-Ufl"/>
+                                    <constraint firstItem="Yjc-Pq-Ha9" firstAttribute="top" secondItem="WOH-1O-ATT" secondAttribute="bottom" constant="20" id="uLD-Gr-Qnc"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="paK-ad-Qdr">
                                 <rect key="frame" x="20" y="79.5" width="374" height="677"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZHJ-uS-Wuf">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZHJ-uS-Wuf">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="104.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="S35-v4-73f" userLabel="▲ ● ■" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="86" height="104.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="5xI-L1-14G"/>
@@ -122,7 +127,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="U4R-5t-cWO" userLabel="▲ ● ■" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="96" y="0.0" width="86" height="104.5"/>
+                                                <rect key="frame" x="95.5" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal">
                                                     <string key="title">▲
@@ -134,7 +139,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="E6m-GR-95O" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="192" y="0.0" width="86" height="104.5"/>
+                                                <rect key="frame" x="191" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal">
                                                     <string key="title">▲
@@ -146,7 +151,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cW8-6x-JJk" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="288" y="0.0" width="86" height="104.5"/>
+                                                <rect key="frame" x="286.5" y="0.0" width="87.5" height="104.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal">
                                                     <string key="title">▲
@@ -159,7 +164,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UfZ-kG-U3e">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UfZ-kG-U3e">
                                         <rect key="frame" x="0.0" y="114.5" width="374" height="104.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1wa-ab-m8B" customClass="CardButton" customModule="Set" customModuleProvider="target">
@@ -212,7 +217,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LHe-us-1eJ">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LHe-us-1eJ">
                                         <rect key="frame" x="0.0" y="229" width="374" height="104.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sIQ-Vt-ZrB" customClass="CardButton" customModule="Set" customModuleProvider="target">
@@ -265,7 +270,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-5y-x7h">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-5y-x7h">
                                         <rect key="frame" x="0.0" y="343.5" width="374" height="104.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Bry-K0-pFZ" customClass="CardButton" customModule="Set" customModuleProvider="target">
@@ -318,7 +323,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="66k-Wf-UZy">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="66k-Wf-UZy">
                                         <rect key="frame" x="0.0" y="458" width="374" height="104.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hBq-Sq-fLH" customClass="CardButton" customModule="Set" customModuleProvider="target">
@@ -371,7 +376,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CPY-Nc-86C">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CPY-Nc-86C">
                                         <rect key="frame" x="0.0" y="572.5" width="374" height="104.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="q54-Ma-2T8" customClass="CardButton" customModule="Set" customModuleProvider="target">

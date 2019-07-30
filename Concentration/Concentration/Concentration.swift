@@ -77,17 +77,15 @@ struct Concentration
     
     private struct Scoring {
         // 10 scores if cards are matched
-        static let matchBonus = 10
+        static let matchBonus       = 10
         // 5 scores penalty if missmatch
         static let missmatchPenalty = 5
-        static let maxTimePenalty = 5
+        static let maxTimePenalty   = 5
     }
     
     private var clickDate: Date?
     private var timePenalty: Int {
-        get {
             return min(-Int(clickDate?.timeIntervalSinceNow ?? 0), Scoring.maxTimePenalty)
-        }
     }
 }
 
