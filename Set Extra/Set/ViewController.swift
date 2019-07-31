@@ -160,6 +160,8 @@ class ViewController: UIViewController
             let randomTimeInterval = TimeInterval(Int.random(in: 3...5))
             iPhoneTimer = Timer.scheduledTimer(withTimeInterval: randomTimeInterval, repeats: false, block:
                 { timer in
+                    // Closure will work only if no cards are chosen at the moment.
+                    guard self.game.selectedCards.isEmpty else { timer.invalidate(); return }
                     // Sets currentPlayer to iPhone
                     self.game.currentPlayer = .iphone
                     self.dealMoreCardsButton.isUserInteractionEnabled = false
