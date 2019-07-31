@@ -1,4 +1,4 @@
-# Set Game with Assignment II Extra Credit.
+# Assignment II: Set Game with Extra Credit.
 
 Added:
 
