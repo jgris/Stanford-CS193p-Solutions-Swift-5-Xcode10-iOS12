@@ -62,6 +62,9 @@ class ViewController: UIViewController
     @IBAction func dealMoreCards(_ sender: UIButton) {
         game.deal(3)
         updateUIfromModel()
+        // Shows number of cards in deck
+        dealMoreCardsButton.setTitle(game.numbederOfCardsInDeck.asString + " in Deck", for: .normal)
+        Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { timer in self.dealMoreCardsButton.setTitle("Deal 3 More", for: .normal)})
     }
     // Starts new game
     @IBAction func newGame(_ sender: UIButton) {
@@ -112,9 +115,6 @@ class ViewController: UIViewController
         dealMoreCardsButton.isEnabled = !UIIsFull &&
                                         game.numbederOfCardsInDeck > 0 ||
                                         (UIIsFull && game.gameMatchState == .matched)
-        // Shows number of cards in deck
-        // TODO: - numberOfCardsInDeckLabel
-//        numberOfCardsInDeckLabel.text = game.numbederOfCardsInDeck.asString + " in Deck"
         // shows scores of current game
         userScoreDisplayLabel.text        = "\(game.score[0].asString) / \(game.matchedSets[0])"
         iphoneScoreDisplayLabel.text      = "\(game.score[1].asString) / \(game.matchedSets[1])"
