@@ -71,7 +71,7 @@ struct Game
         if gameMatchState == .matched {
             cleanAfterMatching()
         } else {
-            // Extra Credit 2 - penaltize pressing Deal if at least 1 Set is visible.
+            // Extra Credit 2 - penalize pressing Deal if at least 1 Set is visible.
             if !allFoundSets.isEmpty { setScore(for: .dealIfSets) }
             let cards = takeCardsFromDeck(amount: amount)
             cardsInGame += cards
