@@ -13,20 +13,35 @@ struct Game
     
     private var deck: Deck
     
+    var currentPlayer: Player = .user
+    
     //     MARK: - Initialisations
     /// Creates instance of Deck and
     init() {
         self.deck = Deck()
         self.cardsInGame = takeCardsFromDeck(amount: 12)
+        findSets()
+        // Initial point in time
+        lastActionTime = Date()
     }
     
     //    MARK: - Public API
     
-    /// Returns number of cards in deck.
-    var numbederOfCardsInDeck: Int { return deck.count }
+    /// Number of cards in deck.
+    var numbederOfCardsInDeck:  Int { return deck.count }
     
+    /// Number of all visible sets
+    var countOfallFoundSets:    Int { return allFoundSets.count }
+    
+    private(set) var currentCheatSet = [Card]()
+    
+    private(set) var randomIphoneSet = [Card]()
+    
+    // When the property is set, looking for all Sets of cards in the game
+    // We have to call findSets() every time we set 'cardsInGame',
+    // because matching combinations with new cards in the game will be different.
     /// Cards currently in the game
-    private(set) var cardsInGame = [Card?]()
+    private(set) var cardsInGame = [Card]() { didSet { findSets() } }
     
     /// Cards been selected for matching
     private(set) var selectedCards = [Card]()
@@ -35,27 +50,12 @@ struct Game
     private(set) var matchedCards = [Card]()
     
     // Counter of successful matches
-    private(set) var matchedSets = 0
+    private(set) var matchedSets = [0, 0]
     
     // Scores of the current game
-    private(set) var score = 0
+    private(set) var score = [0, 0]
     
     
-    /// Puts taken [Card] from the deck to 'cardsInGame'
-    mutating func deal(_ amount: Int) {
-        if gameMatchState == .matched {
-            cleanAfterMatching()
-        } else {
-            let cards = takeCardsFromDeck(amount: amount)
-            cardsInGame += cards
-        }
-    }
-    
-    // MARK: - Internal Implementation
-    
-    /// Can have one of three states of type 'MatchState':
-    /// .matched, .notMatched, .notSet
-    private(set) var gameMatchState: MatchState = .notSet
     
     /// Toggle card selection
     mutating func chooseCard(_ card: Card) {
@@ -65,6 +65,39 @@ struct Game
             deselectCard(card)
         }
     }
+    
+    /// Puts taken [Card] from the deck to 'cardsInGame'
+    mutating func deal(_ amount: Int) {
+        if gameMatchState == .matched {
+            cleanAfterMatching()
+        } else {
+            // Extra Credit 2 - penaltize pressing Deal if at least 1 Set is visible.
+            if !allFoundSets.isEmpty { setScore(for: .dealIfSets) }
+            let cards = takeCardsFromDeck(amount: amount)
+            cardsInGame += cards
+        }
+    }
+    
+    /// Returns one of the visible sets;
+    /// Removes its from 'allFoundSets'
+    /// - Returns: Array [Card]
+    mutating func cheatSet(){
+        guard !allFoundSets.isEmpty else { return }
+        currentCheatSet = allFoundSets.removeFirst()
+    }
+    
+    // MARK: - Internal Implementation
+    
+    // Extra Credit 1 - "speed of play"
+    /// Here we set a point in time in order to track player speed
+    private var lastActionTime: Date?
+    
+    /// Array with all found Sets
+    private var allFoundSets = [[Card]]()
+    
+    /// Can have one of three states of type 'MatchState':
+    /// .matched, .notMatched, .notSet
+    private(set) var gameMatchState: MatchState = .notSet
     
     ///  Returns '[Card]' by removing 'number' of 'Card's in 'deck'
     ///  if 'deck' has that number of 'Card's.
@@ -91,31 +124,52 @@ struct Game
         }
     }
     
-    ///
+    /// Find all matched sets of cards in the game and stores it in 'allFoundSets' of the game.
+    /// Add random set to iphoneRandomSet.
+    private mutating func findSets() {
+        guard cardsInGame.count > 2 else { return }
+        if !allFoundSets.isEmpty { allFoundSets.removeAll() }
+        for i in 0..<cardsInGame.count {
+            for j in (i+1)..<cardsInGame.count {
+                for k in (j+1)..<cardsInGame.count {
+                    let cards = [cardsInGame[i], cardsInGame[j], cardsInGame[k]]
+                    // Testing cards for matching using method 'isSet()' of our extension of Array<Card>
+                    if cards.isSet() { allFoundSets.append(cards) }
+                }
+            }
+        }
+        self.randomIphoneSet = allFoundSets.randomElement() ?? []
+    }
+    
+    /// Tests selected cards for matching
     private mutating func matchCards() {
         guard selectedCards.count == 3 else { return }
-        // Testing weather cards is matched
-        let sum = [
-            selectedCards.reduce(0, { $0 + $1.number }),
-            selectedCards.reduce(0, { $0 + $1.shape.rawValue }),
-            selectedCards.reduce(0, { $0 + $1.color.rawValue }),
-            selectedCards.reduce(0, { $0 + $1.fill.rawValue })
-        ]
-//        print("sum: \(sum)") // test
-        let isMatched = sum.reduce(true, { $0 && ($1 % 3 == 0) })
-//        let isMatched = true // test
-        if isMatched {
+        // Testing cards for matching using method 'isSet()' of our extension of Array<Card>
+        if selectedCards.isSet() {
             // Populate 'matchedCards' with contents of 'selectedCard'
             matchedCards += selectedCards
-            matchedSets += 1
+            matchedSets[currentPlayer.rawValue] += 1
             gameMatchState = .matched
             setScore(for: .matched)
+            
+           /* If there is matched set on table, remove sets containing matched cards out of the allFoundSets.
+             We do it because if we tap on Cheat button while matched set is displayed on the table,
+             we don't want to see highlited cheats with cards that already matched and will be removed
+             from the table in a second. */
+//            print(randomIphoneSet.map {"card \($0.identifier)"}, "-" ) // test
+            for card in matchedCards {
+                allFoundSets.forEach { set in
+                    if set.contains(card) { allFoundSets.removeElements([set]) }
+                }
+                if randomIphoneSet.contains(card) { randomIphoneSet.removeAll() }
+            }
+            
         } else {
             gameMatchState = .notMatched
             setScore(for: .mismatched)
         }
     }
-    
+
     private mutating func cleanAfterMatching() {
         // remove contents of 'selectedCards'
         selectedCards.removeAll()
@@ -133,6 +187,7 @@ struct Game
         // remove contents of 'matchedCards'
         matchedCards.removeAll()
         gameMatchState = .notSet
+        lastActionTime = Date()
     }
     
     /// Sets 'score' of the game for player's action:
@@ -140,30 +195,48 @@ struct Game
     /// - Parameters:
     ///     - action: type 'Points'
     private mutating func setScore(for action: Points) {
-        self.score += action.rawValue
+        if action == .matched {
+            let timePenalty = min(-Int(lastActionTime?.timeIntervalSinceNow ?? 0), 4)
+            self.score[currentPlayer.rawValue] += action.score - timePenalty
+    
+        } else {
+            self.score[currentPlayer.rawValue] += action.score
+        }
     }
     
     // Points for player's actions
     private enum Points: Int {
-        case matched    =  3
-        case mismatched = -5
-        case deselected = -1
+        case matched
+        case mismatched
+        case deselected
+        case dealIfSets
+        
+        var score: Int {
+            switch self {
+            case .matched: return 5
+            case .mismatched: return -3
+            case .deselected, .dealIfSets: return -1
+            }
+        }
     }
     
     enum MatchState {
         case matched, notMatched, notSet
     }
     
+    enum Player: Int {
+        case user = 0
+        case iphone
+    }
 }
 
-// MARK: - Extensions
 extension Int {
     var asString: String {
         return String(self)
     }
 }
 
-extension Array where Element: Hashable {
+extension Array where Element: Equatable {
     /// Replaces elements at specified positions with new ones
     /// - Parameters:
     ///     - oldElements: Array with Elements to replace, if found in 'self'
@@ -181,4 +254,17 @@ extension Array where Element: Hashable {
         self = self.filter { !elements.contains($0) }
     }
 }
-
+// It might be more convenient to use an Array extension to match 3 cards in Array.
+extension Array where Element == Card {
+    /// Returns 'true' if cards in 'self' is matched.
+    func isSet() -> Bool {
+        guard self.count == 3 else { return false }
+        let sum = [
+            self.reduce(0, { $0 + $1.number }),
+            self.reduce(0, { $0 + $1.shape.rawValue }),
+            self.reduce(0, { $0 + $1.color.rawValue }),
+            self.reduce(0, { $0 + $1.fill.rawValue })
+        ]
+        return sum.reduce(true, { $0 && ($1 % 3 == 0) })
+    }
+}
