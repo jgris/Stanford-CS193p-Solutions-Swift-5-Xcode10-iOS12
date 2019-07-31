@@ -64,7 +64,9 @@ class ViewController: UIViewController
         updateUIfromModel()
         // Shows number of cards in deck
         dealMoreCardsButton.setTitle(game.numbederOfCardsInDeck.asString + " in Deck", for: .normal)
-        Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { timer in self.dealMoreCardsButton.setTitle("Deal 3 More", for: .normal)})
+        Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { timer in
+            let titleString = self.game.numbederOfCardsInDeck > 0 ? "Deal 3 More" : "No More Cards"
+            self.dealMoreCardsButton.setTitle(titleString, for: .normal)})
     }
     // Starts new game
     @IBAction func newGame(_ sender: UIButton) {
