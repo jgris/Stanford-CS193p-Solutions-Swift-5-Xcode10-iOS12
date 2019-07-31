@@ -53,7 +53,6 @@ class ViewController: UIViewController
 //            print("button \(card.identifier)")
             game.currentPlayer = .user
             iPhoneTimer?.invalidate()
-            iPhoneHighlightTimer?.invalidate()
             game.chooseCard(card)
             updateUIfromModel()
         }
@@ -73,7 +72,6 @@ class ViewController: UIViewController
         game = Game()
         updateUIfromModel()
         iPhoneTimer?.invalidate()
-        iPhoneHighlightTimer?.invalidate()
         goIphone()
     }
     
@@ -139,7 +137,6 @@ class ViewController: UIViewController
         if game.gameMatchState == .matched && game.randomIphoneSet.isEmpty {
             iphoneEmoji.setTitle("🥺 No..", for: .normal)
             iPhoneTimer?.invalidate()
-            iPhoneHighlightTimer?.invalidate()
         }
         if game.selectedCards.isEmpty {iPhoneTimer?.invalidate(); goIphone() }
     }
@@ -155,7 +152,6 @@ class ViewController: UIViewController
      5. If the Player has been faster than the iPhone - repeat.
      */
     private weak var iPhoneTimer: Timer?
-    private weak var iPhoneHighlightTimer: Timer?
     
     private func goIphone() {
         if !game.randomIphoneSet.isEmpty && game.selectedCards.isEmpty {
@@ -179,7 +175,7 @@ class ViewController: UIViewController
                             button.layer.borderWidth = CGFloat(4.0)
                         }
                     }
-                    self.iPhoneHighlightTimer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block:
+                    Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block:
                         { higlightTimer in
                             self.cardButtons.forEach { button in
                                 // Unlocking interactions with buttons after the iPhone finished.
