@@ -138,6 +138,17 @@ class ViewController: UIViewController
             iphoneEmoji.setTitle("🥺 No..", for: .normal)
             iPhoneTimer?.invalidate()
         }
+        if game.isEnded {
+            if game.matchedSets[0] > game.matchedSets[1] {
+                userEmoji.setTitle("WINNER! 👤", for: .normal)
+                iphoneEmoji.setTitle("😡 LOSER!", for: .normal)
+            } else {
+                userEmoji.setTitle("😡 LOSER!", for: .normal)
+                iphoneEmoji.setTitle("WINNER! 👤", for: .normal)
+            }
+            matchStatusLabel.text = "🏆 🏆 🏆"
+            iPhoneTimer?.invalidate()
+        }
         if game.selectedCards.isEmpty {iPhoneTimer?.invalidate(); goIphone() }
     }
     

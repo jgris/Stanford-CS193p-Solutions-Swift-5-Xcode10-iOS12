@@ -55,8 +55,11 @@ struct Game
     // Scores of the current game
     private(set) var score = [0, 0]
     
-    
-    
+    // Returns true шf it's impossible to find at least one set and there are no cards in the deck.
+    var isEnded: Bool {
+        return allFoundSets.isEmpty && numbederOfCardsInDeck == 0
+    }
+
     /// Toggle card selection
     mutating func chooseCard(_ card: Card) {
         if !selectedCards.contains(card) {

@@ -8,8 +8,10 @@
 
 import Foundation
 
-struct Card: Hashable
+struct Card: Hashable, CustomStringConvertible
 {
+    var description: String { return "\(number)-\(shape)-\(color)-\(fill)" }
+    
 //    Card's unique identifier
     private(set) var identifier: Int
     // Card's attributes

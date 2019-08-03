@@ -31,35 +31,32 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
                                         <subviews>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUC-Sn-8FO">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="44"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="75" id="9Mg-Qv-ho0"/>
-                                                </constraints>
                                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="🤔">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gew-x9-AbC">
-                                                <rect key="frame" x="75" y="0.0" width="112" height="44"/>
+                                                <rect key="frame" x="105" y="0.0" width="82" height="44"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGz-oa-FFd">
-                                                <rect key="frame" x="187" y="0.0" width="112" height="44"/>
+                                                <rect key="frame" x="187" y="0.0" width="82" height="44"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYb-1d-IJc">
-                                                <rect key="frame" x="299" y="0.0" width="75" height="44"/>
+                                                <rect key="frame" x="269" y="0.0" width="105" height="44"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="75" id="D7z-rl-bd8"/>
+                                                    <constraint firstAttribute="width" constant="105" id="D7z-rl-bd8"/>
                                                 </constraints>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                                 <state key="normal" title="👤">
@@ -68,6 +65,7 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="WYb-1d-IJc" firstAttribute="width" secondItem="hUC-Sn-8FO" secondAttribute="width" id="Dgb-1n-k0G"/>
                                             <constraint firstItem="jGz-oa-FFd" firstAttribute="width" secondItem="Gew-x9-AbC" secondAttribute="width" id="fgl-9P-heO"/>
                                             <constraint firstAttribute="height" constant="44" id="hUL-CO-46Y"/>
                                         </constraints>
