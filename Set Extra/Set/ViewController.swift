@@ -102,7 +102,7 @@ class ViewController: UIViewController
             let button = cardButtons[index]
             if index < game.cardsInGame.count {
                 let card = game.cardsInGame[index]
-                button.cardIsSelected = game.selectedCards.contains(card) ? true : false
+                button.cardIsSelected = game.selectedCards.contains(card)
                 if      game.matchedCards.contains(card) { button.matchState = .matched }
                 else if button.cardIsSelected && game.selectedCards.count == 3 { button.matchState = .notMatched }
                 else { button.matchState = .notSet }

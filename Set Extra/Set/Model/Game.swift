@@ -137,7 +137,7 @@ struct Game
                 for k in (j+1)..<cardsInGame.count {
                     let cards = [cardsInGame[i], cardsInGame[j], cardsInGame[k]]
                     // Testing cards for matching using method 'isSet()' of our extension of Array<Card>
-                    if cards.isSet() { allFoundSets.append(cards) }
+                    if cards.isSet { allFoundSets.append(cards) }
                 }
             }
         }
@@ -148,7 +148,7 @@ struct Game
     private mutating func matchCards() {
         guard selectedCards.count == 3 else { return }
         // Testing cards for matching using method 'isSet()' of our extension of Array<Card>
-        if selectedCards.isSet() {
+        if selectedCards.isSet {
             // Populate 'matchedCards' with contents of 'selectedCard'
             matchedCards += selectedCards
             matchedSets[currentPlayer.rawValue] += 1
@@ -260,14 +260,11 @@ extension Array where Element: Equatable {
 // It might be more convenient to use an Array extension to match 3 cards in Array.
 extension Array where Element == Card {
     /// Returns 'true' if cards in 'self' is matched.
-    func isSet() -> Bool {
+    var isSet: Bool {
         guard self.count == 3 else { return false }
-        let sum = [
-            self.reduce(0, { $0 + $1.number }),
-            self.reduce(0, { $0 + $1.shape.rawValue }),
-            self.reduce(0, { $0 + $1.color.rawValue }),
-            self.reduce(0, { $0 + $1.fill.rawValue })
-        ]
-        return sum.reduce(true, { $0 && ($1 % 3 == 0) })
+        return self.reduce(0, { $0 + $1.number }) % 3 == 0 &&
+               self.reduce(0, { $0 + $1.shape.rawValue }) % 3 == 0 &&
+               self.reduce(0, { $0 + $1.color.rawValue }) % 3 == 0 &&
+               self.reduce(0, { $0 + $1.fill.rawValue }) % 3 == 0
     }
 }
