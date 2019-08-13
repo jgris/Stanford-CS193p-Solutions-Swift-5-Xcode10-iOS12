@@ -18,7 +18,7 @@ private func largestCellForAspectRatio() -> CGSize {
 		for rowCount in 1...cellCount {
 	        let estimatedCell = estimatedCellSize(rowCount: rowCount, currentLargestAllowedSize: largestCell)
 	        // We do not need to go through from 1 to 'cellCount' to find out the largest cell available.
-            // If 'estimatedCell' give us the same size that 'largestCell' alrady has, we can break the loop.
+                // If 'estimatedCell' give us the same size that 'largestCell' alrady has, we can break the loop.
 	        if estimatedCell != CGSize.zero {
 	            if estimatedCell == largestCell { break }
 	            largestCell = estimatedCell
