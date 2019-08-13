@@ -3,6 +3,7 @@ Developing Applications for iOS. Swift 5, Xcode 10, iOS 12
 
 ## Programming Projects. 
 Solutions for Assignments.
+
 |  Lectures |  Assignment                                               |  Solution       |      
 | --------- | --------------------------------------------------------  | --------------- | 
 | Lecture 2 | Assignment I: Concentration app (with Extra Credit)     | [Concentration](https://github.com/jgris/Stanford-CS193p-Solutions-Swift-5-Xcode10-iOS12/tree/master/Concentration) |
