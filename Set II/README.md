@@ -10,7 +10,7 @@
 6. Game works properly and looks good in both Portrait and Landscape orientations on all iPhones and iPads.
 
 I didn't use Grid.swift provided by Stanford's instructor to define the frames for cards, but my Grid object is very similar to it. 
-For example if we need to define the frames of cards to display 81 cards ('cellCount = 81'), we don't have to go through 'for' cycle from 1 to 'cellCount'. We can break the cycle as soon as we get 'estimatedCell' of the same value that 'largestCell' already has:
+But there are some differences. For example if we need to define the frames of cards to display 81 cards ('cellCount = 81'), we don't have to go through 'for' cycle from 1 to 'cellCount'. We can break the cycle as soon as we get 'estimatedCell' of the same value that 'largestCell' already has:
 ```swift
 private func largestCellForAspectRatio() -> CGSize {
 	var largestCell = CGSize.zero
