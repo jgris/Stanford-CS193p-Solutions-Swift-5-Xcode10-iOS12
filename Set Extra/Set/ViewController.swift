@@ -69,9 +69,9 @@ class ViewController: UIViewController
     }
     // Starts new game
     @IBAction func newGame(_ sender: UIButton) {
+        iPhoneTimer?.invalidate()
         game = Game()
         updateUIfromModel()
-        iPhoneTimer?.invalidate()
         goIphone()
     }
     
