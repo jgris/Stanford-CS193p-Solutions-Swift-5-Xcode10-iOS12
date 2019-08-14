@@ -10,7 +10,7 @@
 6. Game works properly and looks good in both Portrait and Landscape orientations on all iPhones and iPads.
 
 I didn't use Grid.swift provided by Stanford's instructor to define the frames for cards, but my Grid object is very similar to it. 
-For example if we need to define the frames of cards to display 81 cards ('cellCount = 81'), we don't have to go through 'for' cycle from 1 to 'cellCount'. We can break the cycle as soon as we get 'estimatedCell' of the same value that 'largestCell' already has:
+But there are some differences. For example if we need to define the frames of cards to display 81 cards ('cellCount = 81'), we don't have to go through 'for' cycle from 1 to 'cellCount' where 'cellCount' = 81. We can break the cycle as soon as we get 'estimatedCell' of the same value that 'largestCell' already has:
 ```swift
 private func largestCellForAspectRatio() -> CGSize {
 	var largestCell = CGSize.zero
@@ -18,7 +18,7 @@ private func largestCellForAspectRatio() -> CGSize {
 		for rowCount in 1...cellCount {
 	        let estimatedCell = estimatedCellSize(rowCount: rowCount, currentLargestAllowedSize: largestCell)
 	        // We do not need to go through from 1 to 'cellCount' to find out the largest cell available.
-            // If 'estimatedCell' give us the same size that 'largestCell' alrady has, we can break the loop.
+                // If 'estimatedCell' give us the same size that 'largestCell' alrady has, we can break the loop.
 	        if estimatedCell != CGSize.zero {
 	            if estimatedCell == largestCell { break }
 	            largestCell = estimatedCell
