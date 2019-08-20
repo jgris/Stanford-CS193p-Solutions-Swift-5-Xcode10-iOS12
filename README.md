@@ -4,7 +4,7 @@ Developing Applications for iOS. Swift 5, Xcode 10, iOS 12
 ## Programming Projects. 
 Solutions for Assignments.
 
-| Projects                                                     | Solution                                                     | Assignments                                                  |
+| Projects                                                     | Solutions                                                     | Assignments                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Programming Project 1: Concentration app (with Extra Credit) | [With Extra](https://github.com/jgris/Stanford-CS193p-Solutions-Swift-5-Xcode10-iOS12/tree/master/Concentration) | [Assignment I](https://github.com/jgris/Stanford-CS193p-Solutions-Swift-5-Xcode10-iOS12/blob/master/Assignments/Programming%20Project%201%20Concentration.pdf) |
 | Programming Project 2: Set Game                              | [Required](https://github.com/jgris/Stanford-CS193p-Solutions-Swift-5-Xcode10-iOS12/tree/master/Set) \| [With Extra](https://github.com/jgris/Stanford-CS193p-Solutions-Swift-5-Xcode10-iOS12/tree/master/Set%20Extra) | [Assignment II](https://github.com/jgris/Stanford-CS193p-Solutions-Swift-5-Xcode10-iOS12/blob/master/Assignments/Programming%20Project%202%20Set.pdf) |
