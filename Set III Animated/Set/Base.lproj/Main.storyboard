@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Set" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="redraw" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOO-g5-B5y">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-0m-WPa" customClass="GameFieldView" customModule="Set" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28.5" width="1024" height="1186.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="WOH-1O-ATT">
+                                <rect key="frame" x="0.0" y="1306" width="1024" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUC-Sn-8FO" userLabel="User1 Set Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="338.5" height="30"/>
+                                        <color key="backgroundColor" red="0.41870462894439697" green="0.21948394179344177" blue="0.23529168963432312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="👤 SET">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="user1TapSet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WYI-Cc-5g9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuh-GR-38x">
+                                        <rect key="frame" x="342.5" y="0.0" width="339" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="New Game">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tyO-B7-IBK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYb-1d-IJc" userLabel="User2 Set Button">
+                                        <rect key="frame" x="685.5" y="0.0" width="338.5" height="30"/>
+                                        <color key="backgroundColor" red="0.41870474815368652" green="0.22347185015678406" blue="0.23529127240180969" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="SET 👤">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="user2TapSet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8lq-Xo-OPb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WYb-1d-IJc" firstAttribute="height" secondItem="fuh-GR-38x" secondAttribute="height" id="Nqk-so-PTb"/>
+                                    <constraint firstItem="hUC-Sn-8FO" firstAttribute="height" secondItem="fuh-GR-38x" secondAttribute="height" id="Sbt-GA-hcO"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="492-TR-XB1">
+                                <rect key="frame" x="0.0" y="1223" width="1024" height="75"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pocket" translatesAutoresizingMaskIntoConstraints="NO" id="quu-2c-yjY">
+                                        <rect key="frame" x="0.0" y="0.0" width="340.5" height="75"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fTK-oL-IlE">
+                                        <rect key="frame" x="341.5" y="0.0" width="341" height="75"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Deal More"/>
+                                        <connections>
+                                            <action selector="dealMoreCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZuJ-6K-UVd"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pocket" translatesAutoresizingMaskIntoConstraints="NO" id="YZz-bo-m7f">
+                                        <rect key="frame" x="683.5" y="0.0" width="340.5" height="75"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="aqM-Qv-J8x"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bPn-0m-WPa" firstAttribute="top" secondItem="aOO-g5-B5y" secondAttribute="bottom" constant="8" id="0rJ-QJ-7SR"/>
+                            <constraint firstItem="492-TR-XB1" firstAttribute="leading" secondItem="mx3-dD-SNu" secondAttribute="leading" id="1cf-3S-inm"/>
+                            <constraint firstItem="aOO-g5-B5y" firstAttribute="top" secondItem="mx3-dD-SNu" secondAttribute="top" id="F1W-ef-rL1"/>
+                            <constraint firstItem="WOH-1O-ATT" firstAttribute="leading" secondItem="mx3-dD-SNu" secondAttribute="leading" id="IM4-fg-Tn0"/>
+                            <constraint firstItem="bPn-0m-WPa" firstAttribute="trailing" secondItem="mx3-dD-SNu" secondAttribute="trailing" id="QzD-uN-IfY"/>
+                            <constraint firstItem="bPn-0m-WPa" firstAttribute="leading" secondItem="mx3-dD-SNu" secondAttribute="leading" id="SRf-r1-gM3"/>
+                            <constraint firstItem="492-TR-XB1" firstAttribute="top" secondItem="bPn-0m-WPa" secondAttribute="bottom" constant="8" id="Uv0-3I-kcG"/>
+                            <constraint firstItem="aOO-g5-B5y" firstAttribute="leading" secondItem="mx3-dD-SNu" secondAttribute="leading" id="k2C-Y5-rrf"/>
+                            <constraint firstItem="492-TR-XB1" firstAttribute="trailing" secondItem="mx3-dD-SNu" secondAttribute="trailing" id="kh2-3t-qsC"/>
+                            <constraint firstItem="bPn-0m-WPa" firstAttribute="trailing" secondItem="WOH-1O-ATT" secondAttribute="trailing" id="mYg-Kg-vy4"/>
+                            <constraint firstItem="mx3-dD-SNu" firstAttribute="trailing" secondItem="WOH-1O-ATT" secondAttribute="trailing" id="rVs-q7-PWy"/>
+                            <constraint firstItem="mx3-dD-SNu" firstAttribute="bottom" secondItem="WOH-1O-ATT" secondAttribute="bottom" constant="10" id="t0r-W9-bwL"/>
+                            <constraint firstItem="WOH-1O-ATT" firstAttribute="top" secondItem="492-TR-XB1" secondAttribute="bottom" constant="8" id="u8T-o0-N7q"/>
+                            <constraint firstItem="mx3-dD-SNu" firstAttribute="trailing" secondItem="aOO-g5-B5y" secondAttribute="trailing" id="xcV-L0-b5g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mx3-dD-SNu"/>
+                    </view>
+                    <connections>
+                        <outlet property="dealMoreButton" destination="fTK-oL-IlE" id="FJ4-FO-eHt"/>
+                        <outlet property="gameFieldView" destination="bPn-0m-WPa" id="Rwm-vw-s4I"/>
+                        <outlet property="matchStatusLabel" destination="aOO-g5-B5y" id="gME-Uq-b2R"/>
+                        <outlet property="user1SetButton" destination="hUC-Sn-8FO" id="cef-sQ-Ae8"/>
+                        <outlet property="user2SetButton" destination="WYb-1d-IJc" id="Hum-Lp-hZ3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.27678571428569" y="137.68115942028987"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pocket" width="620" height="340"/>
+    </resources>
+</document>
